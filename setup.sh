@@ -14,9 +14,14 @@ while [[ ! ${values[@]} =~ $check ]]; do
 done
 
 if [[ $check = 'y' || $check = 'Y' ]]; then
-    cp '.vimrc' '~'
+    if [[ -f '/home/maxh/.vimrc' ]]; then
+        rm -rf '/home/maxh/.vimrc'
+        cp '.vimrc' '/home/maxh'
+    fi
 
+    echo '.vimrc file has been overwritten.'
+    exit 0
 elif [[ $check = 'n' || $check = 'N' ]]; then
-    echo 'Okay, bye'
+    echo 'Okay, bye!'
     exit -1
 fi
