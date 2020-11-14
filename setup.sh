@@ -19,9 +19,9 @@ done
 # What to do when correct reponse entered
 if [[ $check = 'y' || $check = 'Y' ]]; then
 	# Make sure curl is installed. If not, install it
-	if [[ ! -x $(command -v curl) ]]; then
+	if [[ ! -x $(command -v wget) ]]; then
 		apt-get update
-		apt-get install curl -y
+		apt-get install wget -y
 	fi
 	
 	# Check if vim-plug is installed. If not, install it
