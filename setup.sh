@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run the script as root
-if [[ $EUID > 0 ]]; then
+ if [[ $EUID > 0 ]]; then
 	echo 'Please run script as root'
 	exit -1
 fi
@@ -23,11 +23,11 @@ if [[ $check = 'y' || $check = 'Y' ]]; then
 		apt-get update
 		apt-get install wget -y
 	fi
-	
+
 	# Check if vim-plug is installed. If not, install it
 	if [[ ! -d '/home/maxh/.vim/autoload' ]]; then
 		mkdir '/home/maxh/.vim/autoload'
-		
+
 		pluginUrl='https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 		wget $pluginUrl -O '/home/maxh/.vim/autoload/plug.vim'
 	fi
@@ -39,7 +39,7 @@ if [[ $check = 'y' || $check = 'Y' ]]; then
     else
 		cp '.vimrc' '/home/maxh'
     fi
-    
+
     echo -e '\n.vimrc file has been overwritten.'
     exit 0
 elif [[ $check = 'n' || $check = 'N' ]]; then
