@@ -18,21 +18,21 @@ if [[ $check = "y" || $check = "Y" ]]; then
 	fi
 
 	# Check if vim-plug is installed. If not, install it
-	if [ ! -d "%{HOME}/.vim/" ]; then
-		mkdir "%{HOME}/.vim/"
-	elif [ ! -d "%{HOME}/.vim/autoload" ]; then
-		mkdir "%{HOME}/.vim/autoload/"
+	if [ ! -d "${HOME}/.vim/" ]; then
+		mkdir "${HOME}/.vim/"
+	elif [ ! -d "${HOME}/.vim/autoload" ]; then
+		mkdir "${HOME}/.vim/autoload/"
 	fi
 
 	pluginUrl="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-	curl $pluginUrl -o "%{HOME}/.vim/autoload/plug.vim"
+	curl $pluginUrl -o "${HOME}/.vim/autoload/plug.vim"
 
 	# Make the .vimrc file in /home/maxh
-    if [[ -f "%{HOME}/.vimrc" ]]; then
-        rm -rf "%{HOME}/.vimrc"
-        cp ".vimrc" "%{HOME}"
+    if [[ -f "${HOME}/.vimrc" ]]; then
+        rm -rf "${HOME}/.vimrc"
+        cp ".vimrc" "${HOME}"
     else
-	cp ".vimrc" "%{HOME}"
+	cp ".vimrc" "${HOME}"
     fi
 
     echo -e "\n.vimrc file has been overwritten."
