@@ -20,7 +20,7 @@ if [[ $check = 'y' || $check = 'Y' ]]; then
 	fi
 
 	if [[ ! -d "/home/${USER}/.config/nvim/autoload" ]]; then
-		mkdir "/home/${USER}/.config/nvim/autoload"
+		mkdir -p "/home/${USER}/.config/nvim/autoload"
 
 		pluginUrl='https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 		wget $pluginUrl -O "/home/${USER}/.config/nvim/autoload/plug.vim"
