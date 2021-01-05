@@ -1,8 +1,9 @@
 " Plugins
 call plug#begin()
 
+Plug 'morhetz/gruvbox'
+Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'neoclide/coc.nvim'
-Plug 'joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'itchyny/lightline.vim'
@@ -18,13 +19,18 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 call plug#end()
 
 " Keyboard fix for backspace if error arises
-set backspace=start,indent,eol
+" set backspace=start,indent,eol
 
 " Enable line numbers
 set number
 
-" Set colorscheme to One Dark
-colo onedark
+" gruvbox config options
+let g:gruvbox_italic=1
+
+"Set colorscheme to GruvBox 
+set termguicolors
+colo gruvbox 
+set bg=dark
 
 " Set tabsize to 4
 set tabstop=4
@@ -42,7 +48,7 @@ endif
 set noshowmode
 
 " Set lightline theme to OneDark to match
-let g:lightline = { 'colorscheme': 'onedark' }
+let g:lightline = { 'colorscheme': 'gruvbox' }
 
 " Set NERDTree toggle to <F4> key
 nnoremap <F4> :NERDTreeToggle<CR>
