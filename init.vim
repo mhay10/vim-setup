@@ -2,6 +2,7 @@
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
+Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'neoclide/coc.nvim'
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
@@ -23,12 +24,13 @@ call plug#end()
 " Enable line numbers
 set number
 
-" Enable GruvBox italics
+" gruvbox config options
 let g:gruvbox_italic=1
 
 "Set colorscheme to GruvBox 
 set termguicolors
-colo onedark
+colo gruvbox 
+set bg=dark
 
 " Set tabsize to 4
 set tabstop=4
@@ -46,7 +48,7 @@ endif
 set noshowmode
 
 " Set lightline theme to OneDark to match
-let g:lightline = { 'colorscheme': 'onedark' }
+let g:lightline = { 'colorscheme': 'gruvbox' }
 
 " Set NERDTree toggle to <F4> key
 nnoremap <F4> :NERDTreeToggle<CR>
