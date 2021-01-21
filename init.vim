@@ -156,3 +156,14 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" Create Terminal at bottom of screen with <F7>
+nnoremap <F5> :call <SID>create_terminal()<CR>
+tnoremap <F6> <C-w>:q!<CR>
+
+function! s:create_terminal()
+    set splitbelow
+    set termwinsize=15x0
+    terminal
+endfunction
+

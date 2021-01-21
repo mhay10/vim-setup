@@ -1,10 +1,5 @@
 #!/bin/bash
 
-if [[ $EUID > 0 ]]; then
-	echo 'Please run script as root'
-	exit -1
-fi
-
 echo 'Warning: This will REPLACE the init.vim file in ~/.config/nvim'
 read -p 'Are you sure you want to continue? (y/n): ' check
 
