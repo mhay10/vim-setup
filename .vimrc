@@ -3,7 +3,7 @@ call plug#begin()
 
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'itchyny/lightline.vim'
@@ -25,12 +25,12 @@ call plug#end()
 set number
 
 " gruvbox config options
-let g:gruvbox_italic=1
+" let g:gruvbox_italic=1
 
 "Set colorscheme to GruvBox 
 set termguicolors
-colo gruvbox 
-set bg=dark
+colo pablo 
+" set bg=dark
 
 " Set tabsize to 4
 set tabstop=4
