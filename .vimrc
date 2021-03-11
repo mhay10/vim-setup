@@ -48,7 +48,7 @@ endif
 set noshowmode
 
 " Set lightline theme to OneDark to match
-let g:lightline = { 'colorscheme': 'gruvbox' }
+" let g:lightline = { 'colorscheme': 'gruvbox' }
 
 " Set NERDTree toggle to <F4> key
 nnoremap <F4> :NERDTreeToggle<CR>
