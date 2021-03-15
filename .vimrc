@@ -2,7 +2,8 @@
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
+" Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
@@ -15,26 +16,25 @@ Plug 'jeetsukumaran/vim-pythonsense'
 Plug 'davidhalter/jedi'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'terryma/vim-smooth-scroll'
 
 call plug#end()
 
 " Keyboard fix for backspace if error arises
-" set backspace=start,indent,eol
+set backspace=start,indent,eol
 
 " Enable line numbers
 set number
 
-" gruvbox config options
-" let g:gruvbox_italic=1
-
-"Set colorscheme to GruvBox 
+"Set colorscheme 
 set termguicolors
-colo pablo 
-" set bg=dark
+set background=dark
+colorscheme PaperColor
 
 " Set tabsize to 4
 set tabstop=4
 set expandtab
+retab
 set shiftwidth=4
 
 " Lightline config stuff that github page recommended
@@ -47,8 +47,8 @@ endif
 " Disable internal status like INSERT, VISUAL, etc.
 set noshowmode
 
-" Set lightline theme to OneDark to match
-" let g:lightline = { 'colorscheme': 'gruvbox' }
+" Set lightline theme
+let g:lightline = { 'colorscheme': 'PaperColor' }
 
 " Set NERDTree toggle to <F4> key
 nnoremap <F4> :NERDTreeToggle<CR>
@@ -157,7 +157,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
-" Create Terminal at bottom of screen with <F7>
+" Create Terminal at bottom of screen with <F5> and close with <F6>
 nnoremap <F5> :call <SID>create_terminal()<CR>
 tnoremap <F6> <C-w>:q!<CR>
 
