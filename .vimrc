@@ -2,7 +2,6 @@
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
-" Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'preservim/nerdtree'
@@ -17,6 +16,7 @@ Plug 'davidhalter/jedi'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'terryma/vim-smooth-scroll'
+Plug 'sophacles/vim-processing'
 
 call plug#end()
 
