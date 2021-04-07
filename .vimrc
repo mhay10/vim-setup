@@ -2,7 +2,7 @@
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'crusoexia/vim-monokai'
 Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
@@ -28,8 +28,8 @@ set number
 
 "Set colorscheme 
 set termguicolors
-set background=dark
-colorscheme PaperColor
+syntax on
+colorscheme monokai
 
 " Set tabsize to 4
 set tabstop=4
