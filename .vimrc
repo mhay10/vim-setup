@@ -2,7 +2,6 @@
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
-Plug 'crusoexia/vim-monokai'
 Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
@@ -29,7 +28,7 @@ set number
 "Set colorscheme 
 set termguicolors
 syntax on
-colorscheme monokai
+colorscheme desert 
 
 " Set tabsize to 4
 set tabstop=4
