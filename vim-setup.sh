@@ -12,7 +12,7 @@ done
 
 # What to do when correct reponse entered
 if [[ $check = "y" || $check = "Y" ]]; then
-	# Make sure curl is installed. If not, install it
+	# Make sure wget is installed. If not, install it
 	if [[ ! -x $(command -v wget) ]]; then
 		apt-get update
 		apt-get install wget -y

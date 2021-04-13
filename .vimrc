@@ -2,7 +2,7 @@
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc.nvim'
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'itchyny/lightline.vim'
@@ -13,7 +13,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jeetsukumaran/vim-pythonsense'
 Plug 'davidhalter/jedi'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'MaxMEllon/vim-jsx-pretty' 
 Plug 'terryma/vim-smooth-scroll'
 Plug 'sophacles/vim-processing'
 

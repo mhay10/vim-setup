@@ -9,7 +9,7 @@ while (!$values.Contains($check)) {
 }
 
 # What to do when correct response entered
-if ( $check == "y" -or $check == "Y") {
+if ( $check -eq "y" -or $check -eq "Y") {
     # Check if vim-plug is installed. If not, install it
     if (!Test-Path "$env:UserProfile\vimfiles\autoload") {
         mkdir -Path "$env:UserProfile\vimfiles\autoload"
@@ -23,7 +23,7 @@ if ( $check == "y" -or $check == "Y") {
         Remove-Item -Recurse -Force -Path "$env:UserProfile\_vimrc"
         Copy-Item ".vimrc" "$env:UserProfile\_vimrc"
     } else {
-        Copy-ITem ".vimrc" "$env:UserProfile\_vimrc"
+        Copy-Item ".vimrc" "$env:UserProfile\_vimrc"
     }
 
     Write-Host "_vimrc file has been overwritten."
