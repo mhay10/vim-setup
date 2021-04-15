@@ -12,10 +12,17 @@ done
 
 # What to do when correct reponse entered
 if [[ $check = "y" || $check = "Y" ]]; then
-	# Make sure wget is installed. If not, install it
+	# Make sure wget is installed. If not install it.
+    # Check if debian-based otherwise is arch-based
 	if [[ ! -x $(command -v wget) ]]; then
-		apt-get update
-		apt-get install wget -y
+        is_deb=$(apropos "package manager" | grep "dpkg" | wc -l)
+        if [[ $is_deb != 0 ]]; then
+            apt-get update
+            apt-get install wget -y
+        else
+            sudo pacman -Syy
+            sudo pacman -S wget --noconfirm
+        fi
 	fi
 
 	# Check if vim-plug is installed. If not, install it
