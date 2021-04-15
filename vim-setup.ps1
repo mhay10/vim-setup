@@ -11,7 +11,7 @@ while (!$values.Contains($check)) {
 # What to do when correct response entered
 if ( $check -eq "y" -or $check -eq "Y") {
     # Check if vim-plug is installed. If not, install it
-    if (!Test-Path "$env:UserProfile\vimfiles\autoload") {
+    if ($(Test-Path "$env:UserProfile\vimfiles\autoload") -eq $false) {
         mkdir -Path "$env:UserProfile\vimfiles\autoload"
 
         $pluginUrl = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"

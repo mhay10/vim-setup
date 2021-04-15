@@ -43,6 +43,9 @@ if !has('gui-running')
 	set t_Co=256
 endif
 
+" Set font for GVim
+set guifont=Consolas:h10
+
 " Disable internal status like INSERT, VISUAL, etc.
 set noshowmode
 
