@@ -1,7 +1,6 @@
 " Plugins
 call plug#begin()
 
-Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim'
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
@@ -16,6 +15,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'MaxMEllon/vim-jsx-pretty' 
 Plug 'terryma/vim-smooth-scroll'
 Plug 'sophacles/vim-processing'
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
@@ -28,7 +28,8 @@ set number
 "Set colorscheme 
 set termguicolors
 syntax on
-colorscheme desert 
+set background=dark
+colorscheme PaperColor 
 
 " Set tabsize to 4
 set tabstop=4
