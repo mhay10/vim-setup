@@ -1,7 +1,7 @@
 " Plugins
 call plug#begin()
 
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', { 'do': 'npm install' }
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'itchyny/lightline.vim'
@@ -12,7 +12,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jeetsukumaran/vim-pythonsense'
 Plug 'davidhalter/jedi'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'MaxMEllon/vim-jsx-pretty' 
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'sophacles/vim-processing'
 Plug 'NLKNguyen/papercolor-theme'
